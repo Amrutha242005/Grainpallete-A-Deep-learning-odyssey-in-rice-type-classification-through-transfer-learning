@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            color: #111827;
+        }
+        .result-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            width: 50%;
+            margin: 40px auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .result-box h2 {
+            color: #111827;
+        }
+        .result-label {
+            font-size: 28px;
+            color: #10b981;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .try-again {
+            margin-top: 30px;
+        }
+        .try-again a {
+            background-color: #10b981;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .try-again a:hover {
+            background-color: #0d946d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Prediction Result</h1>
+
+    <div class="result-box">
+        <h2>The rice type is:</h2>
+        
+        <!-- ✅ Show predicted label only -->
+        <div class="result-label">{{ label }}</div>
+
+        <div class="try-again">
+            <a href="{{ url_for('details') }}">Try Another</a>
+        </div>
+    </div>
+
+</body>
+</html>
